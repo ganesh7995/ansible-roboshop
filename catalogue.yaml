@@ -1,5 +1,5 @@
 - name: configure catalogue component
-  hosts: catalouge
+  hosts: catalogue
   become: yes
   tasks:
   - name: desable node js
@@ -65,7 +65,7 @@
     ansible.builtin.command: dnf install mongodb-mongosh -y
 
   - name: check products loaded or not
-    ansible.builtin.command: mongosh --host mongodb.daws84s.site --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
+    ansible.builtin.command: mongosh --host mongodb.gana84s.site --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
     register: catalogue_output
 
   - name: print catalogue output
