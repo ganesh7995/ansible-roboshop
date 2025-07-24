@@ -58,14 +58,14 @@
       state: started
       enabled: yes
 
-  - name: Import data
+  - name: import data
     tags:
     - import
     community.mysql.mysql_db:
       name: all
       login_user: root
       login_password: RoboShop@1
-      login_host: mysql.gana84s.site
+      login_host: mysql.daws84s.site
       state: import
       target: "{{ item }}"
     loop:
