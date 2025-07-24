@@ -3,11 +3,13 @@
   become: yes
   tasks:
   - name: install mysql
-    ansible.builtin.command: dnf install mysql-server -y
+    ansible.builtin.dnf:
+      name: mysql-server
+      state: installed
 
-  - name: start and enavble mysql
+  - name: start and enable mysql
     ansible.buil.service:
-      name: mysql
+      name: mysqld
       state: started
       enabled: yes
   
