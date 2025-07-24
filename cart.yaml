@@ -5,9 +5,12 @@
   - name: Disable nodejs
     ansible.builtin.command: dnf module disable nodejs -y
   
+  - name: Enable node js
+    ansible.builtin.command: dnf module enable nodejs:20 -y
+    
   - name: Install node js
     ansible.builtin.dnf:
-      name: nodejs
+      name: node js
       status: present
 
   - name: Craete systemUser
