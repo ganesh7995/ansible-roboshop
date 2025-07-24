@@ -15,12 +15,12 @@
       path: /app
       state: directory
       
-  - name: crate root user
+  - name: create roboshop system user
     ansible.builtin.user:
       name: roboshop
       shell: /sbin/nologin
       system: true
-      path: /app
+      home: /app
 
   - name: download code
     ansible.builtin.get_url:
