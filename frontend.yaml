@@ -50,6 +50,3 @@
     ansible.builtin.copy:
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
-
-  - name: Restart service nginx
-    ansible.builtin.command: systemctl restart nginx 
