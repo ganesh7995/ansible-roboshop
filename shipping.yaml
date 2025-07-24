@@ -67,7 +67,7 @@
       login_password: RoboShop@1
       login_host: mysql.gana84s.site
       state: import
-      target: "{{ item }}""
+      target: "{{ item }}"
     loop:
     - /app/db/schema.sql
     - /app/db/app-user.sql
@@ -79,4 +79,3 @@
     ansible.builtin.service:
       name: shipping
       state: restarted
-
