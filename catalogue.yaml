@@ -61,7 +61,9 @@
       dest: /etc/yum.repos.d/mongo.repo
 
   - name: install mongosh
-    ansible.builtin.command: dnf install mongodb-mongosh -y
+    ansible.builtin.dnf:
+      name: mongodb-mongosh
+      state: present
 
   - name: check products loaded or not
     ansible.builtin.command: mongosh --host mongodb.gana84s.site --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
