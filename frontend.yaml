@@ -51,7 +51,7 @@
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
 
-  - name: restart nginx
+  - name: Restart service nginx
     ansible.builtin.service:
       name: nginx
       state: restarted
