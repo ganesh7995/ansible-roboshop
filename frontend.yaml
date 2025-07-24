@@ -50,7 +50,7 @@
 
   - name: Restart the service
     ansible.builtin.service:
-      name: niginx
+      name: nginx
       state: restarted
       
 
