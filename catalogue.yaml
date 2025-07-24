@@ -38,7 +38,6 @@
 
   - name: install dependies
     community.general.npm:
-      name: npm
       path: /app
 
   - name: copy catalogue service to system directory
