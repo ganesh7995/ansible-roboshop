@@ -35,7 +35,6 @@
 
   - name: install dependencies
     community.genral.npm:
-      name: npm
       path: /app
 
   - name: Copy cart services to system
