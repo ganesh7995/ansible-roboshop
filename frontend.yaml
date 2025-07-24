@@ -16,7 +16,7 @@
   - name: enable nginx
     ansible.builtin.command: systemctl enable nginx 
 
-  - name: start and enable nginx
+  - name: Ensure NGINX service is started
     ansible.builtin.service:
       name: nginx
       state: started
